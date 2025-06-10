@@ -332,3 +332,160 @@ Containers share host OS kernel, VMs emulate full hardware with separate OS.
 Automated process to deploy code changes reliably and frequently.
 </details>
 
+# Usefull Command
+
+## linux
+### enables IP forwarding  
+sysctl -w net.ipv4.ip_forward=1  
+
+### delete network interface  
+ip link delete "a2"  
+
+### install openssh  
+sudo apt update  
+sudo apt install openssh-client  
+
+### NC  
+nc -ul 200  
+nc -u 10.0.0.1 200  
+
+### error: externally-managed-environment  
+python3 -m venv venv  
+source venv/bin/activate  
+pip install -r requirements.txt  
+
+### make .deb package  
+dpkg-deb --build mypackage  
+
+### ova to ovf  
+tar -xvf vm-export.ova  
+
+### making .deb package again  
+dpkg-deb --build package.deb  
+
+### restart networking  
+systemctl restart systemd-networkd  
+
+### find and kill process  
+sudo lsof -i :400  
+kill -9 1979  
+
+### check current OS version  
+lsb_release -a  
+
+### make a screen  
+screen -ls  
+screen -r "name"  
+screen -S "name"  
+screen -D "name"  
+
+### make a virtual network card  
+sudo ./netns.sh  
+ip netns  
+ip netns exec ns5 bash  
+ip netns id  
+
+### copy with scp  
+scp /path/to/local/file username@ip:/path/to/remote/directory  
+
+## docker
+### enter container  
+docker exec -it --privileged "docker name" /bin/bash  
+
+### clone container  
+docker commit <container_name_or_id> <new_image_name>  
+
+### view containers  
+docker ps -a  
+
+### start container  
+docker start c1  
+
+### stop container  
+docker stop c1  
+
+### delete container  
+docker rm -f c10  
+
+### find images  
+docker images  
+
+### create container  
+docker run -i -t -d --privileged --network=host --name c12 client  
+
+### create multiple containers  
+for i in {6..10}; do docker run -i -t -d --privileged --network=host --name "c$i" client; done  
+
+### rename container  
+docker rename vbox c3  
+
+### copy files into container  
+docker cp /home/admin/tools c1:/home/ubuntu/client  
+
+### get container IP  
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' server  
+
+### save docker image  
+docker save -o client-full.tar c1  
+
+### load docker image  
+docker load -i client-full.tar  
+
+## iperf
+### server  
+iperf -s -P 10  
+
+### client  
+iperf -c 192.168.1.146  
+
+## gitlab
+### first-time clone  
+git clone http://example.com/test  
+
+### add and push  
+git add .  
+git commit -m "detail"  
+git push  
+
+## andriod
+### get shell  
+adb shell  
+
+### root access  
+adb root  
+
+### push file to android  
+adb push /path/to/file /destination/directory  
+
+### pull file from android  
+adb pull /path/to/file /destination/directory  
+
+## make service in linux
+### write shell script  
+sudo nano /path/to/file/service.sh  
+
+### make it executable  
+sudo chmod +x /path/to/file/service.sh  
+
+### create systemd service  
+sudo nano /etc/systemd/system/service.service  
+
+### service file content  
+[Unit]  
+Description=...  
+After=network.target  
+
+[Service]  
+Type=simple  
+ExecStart=/usr/local/bin/service.sh  
+Restart=on-failure  
+User=root  
+
+[Install]  
+WantedBy=multi-user.target  
+
+### enable and start service  
+sudo systemctl daemon-reload  
+sudo systemctl enable service.service  
+sudo systemctl start service.service  
+sudo systemctl status service.service  
