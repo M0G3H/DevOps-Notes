@@ -335,142 +335,267 @@ Automated process to deploy code changes reliably and frequently.
 # Usefull Command
 
 ## linux
-### enables IP forwarding  
-sysctl -w net.ipv4.ip_forward=1  
 
-### delete network interface  
-ip link delete "a2"  
+<details>
+<summary>enables IP forwarding</summary>
+<br>
+sysctl -w net.ipv4.ip_forward=1
+</details>
 
-### install openssh  
+<details>
+<summary>delete network interface</summary>
+<br>
+ip link delete "a2"
+</details>
+
+<details>
+<summary>install openssh</summary>
+<br>
 sudo apt update  
-sudo apt install openssh-client  
+sudo apt install openssh-client
+</details>
 
-### NC  
+<details>
+<summary>NC</summary>
+<br>
 nc -ul 200  
-nc -u 10.0.0.1 200  
+nc -u 10.0.0.1 200
+</details>
 
-### error: externally-managed-environment  
+<details>
+<summary>error: externally-managed-environment</summary>
+<br>
 python3 -m venv venv  
 source venv/bin/activate  
-pip install -r requirements.txt  
+pip install -r requirements.txt
+</details>
 
-### make .deb package  
-dpkg-deb --build mypackage  
+<details>
+<summary>make .deb package</summary>
+<br>
+dpkg-deb --build mypackage
+</details>
 
-### ova to ovf  
-tar -xvf vm-export.ova  
+<details>
+<summary>ova to ovf</summary>
+<br>
+tar -xvf vm-export.ova
+</details>
 
-### making .deb package again  
-dpkg-deb --build package.deb  
+<details>
+<summary>making .deb package again</summary>
+<br>
+dpkg-deb --build package.deb
+</details>
 
-### restart networking  
-systemctl restart systemd-networkd  
+<details>
+<summary>restart networking</summary>
+<br>
+systemctl restart systemd-networkd
+</details>
 
-### find and kill process  
+<details>
+<summary>find and kill process</summary>
+<br>
 sudo lsof -i :400  
-kill -9 1979  
+kill -9 1979
+</details>
 
-### check current OS version  
-lsb_release -a  
+<details>
+<summary>check current OS version</summary>
+<br>
+lsb_release -a
+</details>
 
-### make a screen  
+<details>
+<summary>make a screen</summary>
+<br>
 screen -ls  
 screen -r "name"  
 screen -S "name"  
-screen -D "name"  
+screen -D "name"
+</details>
 
-### make a virtual network card  
+<details>
+<summary>make a virtual network card</summary>
+<br>
 sudo ./netns.sh  
 ip netns  
 ip netns exec ns5 bash  
-ip netns id  
+ip netns id
+</details>
 
-### copy with scp  
-scp /path/to/local/file username@ip:/path/to/remote/directory  
+<details>
+<summary>copy with scp</summary>
+<br>
+scp /path/to/local/file username@ip:/path/to/remote/directory
+</details>
 
 ## docker
-### enter container  
-docker exec -it --privileged "docker name" /bin/bash  
 
-### clone container  
-docker commit <container_name_or_id> <new_image_name>  
+<details>
+<summary>enter container</summary>
+<br>
+docker exec -it --privileged "docker name" /bin/bash
+</details>
 
-### view containers  
-docker ps -a  
+<details>
+<summary>clone container</summary>
+<br>
+docker commit &lt;container_name_or_id&gt; &lt;new_image_name&gt;
+</details>
 
-### start container  
-docker start c1  
+<details>
+<summary>view containers</summary>
+<br>
+docker ps -a
+</details>
 
-### stop container  
-docker stop c1  
+<details>
+<summary>start container</summary>
+<br>
+docker start c1
+</details>
 
-### delete container  
-docker rm -f c10  
+<details>
+<summary>stop container</summary>
+<br>
+docker stop c1
+</details>
 
-### find images  
-docker images  
+<details>
+<summary>delete container</summary>
+<br>
+docker rm -f c10
+</details>
 
-### create container  
-docker run -i -t -d --privileged --network=host --name c12 client  
+<details>
+<summary>find images</summary>
+<br>
+docker images
+</details>
 
-### create multiple containers  
-for i in {6..10}; do docker run -i -t -d --privileged --network=host --name "c$i" client; done  
+<details>
+<summary>create container</summary>
+<br>
+docker run -i -t -d --privileged --network=host --name c12 client
+</details>
 
-### rename container  
-docker rename vbox c3  
+<details>
+<summary>create multiple containers</summary>
+<br>
+for i in {6..10}; do docker run -i -t -d --privileged --network=host --name "c$i" client; done
+</details>
 
-### copy files into container  
-docker cp /home/admin/tools c1:/home/ubuntu/client  
+<details>
+<summary>rename container</summary>
+<br>
+docker rename vbox c3
+</details>
 
-### get container IP  
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' server  
+<details>
+<summary>copy files into container</summary>
+<br>
+docker cp /home/admin/tools c1:/home/ubuntu/client
+</details>
 
-### save docker image  
-docker save -o client-full.tar c1  
+<details>
+<summary>get container IP</summary>
+<br>
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' server
+</details>
 
-### load docker image  
-docker load -i client-full.tar  
+<details>
+<summary>save docker image</summary>
+<br>
+docker save -o client-full.tar c1
+</details>
+
+<details>
+<summary>load docker image</summary>
+<br>
+docker load -i client-full.tar
+</details>
 
 ## iperf
-### server  
-iperf -s -P 10  
 
-### client  
-iperf -c 192.168.1.146  
+<details>
+<summary>server</summary>
+<br>
+iperf -s -P 10
+</details>
+
+<details>
+<summary>client</summary>
+<br>
+iperf -c 192.168.1.146
+</details>
 
 ## gitlab
-### first-time clone  
-git clone http://example.com/test  
 
-### add and push  
+<details>
+<summary>first-time clone</summary>
+<br>
+git clone http://example.com/test
+</details>
+
+<details>
+<summary>add and push</summary>
+<br>
 git add .  
 git commit -m "detail"  
-git push  
+git push
+</details>
 
 ## andriod
-### get shell  
-adb shell  
 
-### root access  
-adb root  
+<details>
+<summary>get shell</summary>
+<br>
+adb shell
+</details>
 
-### push file to android  
-adb push /path/to/file /destination/directory  
+<details>
+<summary>root access</summary>
+<br>
+adb root
+</details>
 
-### pull file from android  
-adb pull /path/to/file /destination/directory  
+<details>
+<summary>push file to android</summary>
+<br>
+adb push /path/to/file /destination/directory
+</details>
+
+<details>
+<summary>pull file from android</summary>
+<br>
+adb pull /path/to/file /destination/directory
+</details>
 
 ## make service in linux
-### write shell script  
-sudo nano /path/to/file/service.sh  
 
-### make it executable  
-sudo chmod +x /path/to/file/service.sh  
+<details>
+<summary>write shell script</summary>
+<br>
+sudo nano /path/to/file/service.sh
+</details>
 
-### create systemd service  
-sudo nano /etc/systemd/system/service.service  
+<details>
+<summary>make it executable</summary>
+<br>
+sudo chmod +x /path/to/file/service.sh
+</details>
 
-### service file content  
+<details>
+<summary>create systemd service</summary>
+<br>
+sudo nano /etc/systemd/system/service.service
+</details>
+
+<details>
+<summary>service file content</summary>
+<br>
 [Unit]  
 Description=...  
 After=network.target  
@@ -482,10 +607,15 @@ Restart=on-failure
 User=root  
 
 [Install]  
-WantedBy=multi-user.target  
+WantedBy=multi-user.target
+</details>
 
-### enable and start service  
+<details>
+<summary>enable and start service</summary>
+<br>
 sudo systemctl daemon-reload  
 sudo systemctl enable service.service  
 sudo systemctl start service.service  
-sudo systemctl status service.service  
+sudo systemctl status service.service
+</details>
+
