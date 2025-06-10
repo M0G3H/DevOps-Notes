@@ -5,7 +5,7 @@
 
 | Subject | Part 1 | Part  |
 | :---: | :---: | :---: |
-| [![linux](https://img.freepik.com/free-psd/3d-render-shiny-blue-question-mark_191095-80786.jpg)](https://github.com/M0G3H/Devops#interview-questions) | ⭐ | ⭐ |
+| [![linux](https://png.pngtree.com/png-vector/20241231/ourmid/pngtree-modern-3d-black-question-mark-with-vibrant-colors-png-image_14873756.png)](https://github.com/M0G3H/Devops#interview-questions) | ⭐ | ⭐ |
 | [Day 2](https://adventofcode.com/2022/day/2) | ⭐ | ⭐ |
 
 
