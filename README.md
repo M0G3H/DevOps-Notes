@@ -6,7 +6,7 @@
 | Subject | Image Link | Description  |
 | :---: | :---: | :---: |
 | Interview Questions | [![linux](https://png.pngtree.com/png-vector/20241231/ourmid/pngtree-modern-3d-black-question-mark-with-vibrant-colors-png-image_14873756.png)](https://github.com/M0G3H/Devops#interview-questions) | Click in image to go |
-| Usefull Command | [![linux](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVp_PL2Px_fmBDTOxOHyaAhrgF4_Srf7M4xw&s)](https://github.com/M0G3H/Devops#usefull-command) | Click in image to go |
+| Usefull Command | [![linux](https://static.thenounproject.com/png/1736259-200.png)](https://github.com/M0G3H/Devops#usefull-command) | Click in image to go |
 
 
 
