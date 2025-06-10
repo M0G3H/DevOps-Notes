@@ -5,8 +5,8 @@
 
 | Subject | Part 1 | Part  |
 | :---: | :---: | :---: |
-| [![linux](https://png.pngtree.com/png-vector/20241231/ourmid/pngtree-modern-3d-black-question-mark-with-vibrant-colors-png-image_14873756.png)](https://github.com/M0G3H/Devops#interview-questions) | ⭐ | ⭐ |
-| [Day 2](https://adventofcode.com/2022/day/2) | ⭐ | ⭐ |
+| [Interview Questions] Interview Questions | (https://png.pngtree.com/png-vector/20241231/ourmid/pngtree-modern-3d-black-question-mark-with-vibrant-colors-png-image_14873756.png)](https://github.com/M0G3H/Devops#interview-questions) | Click in image to go |
+| [Usefull Command] Usefull Command | (https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVp_PL2Px_fmBDTOxOHyaAhrgF4_Srf7M4xw&s)](https://github.com/M0G3H/Devops#usefull-command) | Click in image to go |
 
 
 
