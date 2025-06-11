@@ -342,6 +342,32 @@ Containers share host OS kernel, VMs emulate full hardware with separate OS.
 Automated process to deploy code changes reliably and frequently.
 </details>
 
+<details>
+<summary>Which are the top DevOps tools? what each do?</summary>
+<br>
+Git : Version Control System tool
+Jenkins : Continuous Integration tool
+Selenium : Continuous Testing tool
+Puppet, Chef, Ansible : Configuration Management and Deployment tools
+Nagios : Continuous Monitoring tool
+Docker : Containerization tool
+</details>
+
+<details>
+<summary>How do all these tools work together?</summary>
+<br>
+Given below is a generic logical flow where everything gets automated for seamless delivery. However, this flow may vary from organization to organization as per the requirement.
+
+Developers develop the code and this source code is managed by Version Control System tools like Git etc.
+Developers send this code to the Git repository and any changes made in the code is committed to this Repository.
+Jenkins pulls this code from the repository using the Git plugin and build it using tools like Ant or Maven.
+Configuration management tools like puppet deploys & provisions testing environment and then Jenkins releases this code on the test environment on which testing is done using tools like selenium.
+Once the code is tested, Jenkins send it for deployment on the production server (even production server is provisioned & maintained by tools like puppet).
+After deployment It is continuously monitored by tools like Nagios.
+Docker containers provides testing environment to test the build features.
+devops tools - devops interview questions
+</details>
+
 # Usefull Command
 
 ## linux
