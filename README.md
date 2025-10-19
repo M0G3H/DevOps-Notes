@@ -1,7 +1,7 @@
 
 
 # /DevOps Notes/ [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme) <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="30px" />
-This collection features challenging web application security questions originally shared through my social media channels. These questions are designed to test your knowledge of web application hacking concepts at an advanced level.
+I write about **DevOps**, covering both **Interview Questions** and **Useful Commands** in this repository.
 
 # This Table Is A Link to Contents
 | Subject | Image Link | Description  |
