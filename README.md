@@ -379,6 +379,22 @@ sysctl -w net.ipv4.ip_forward=1
 </details>
 
 <details>
+<summary>upgrade or downgrade kernel</summary>
+<br>
+dpkg -i ./linux-modules.deb
+dpkg -i ./linux-image.deb
+cp ./grub /etc/default
+update-grub
+reboot
+</details>
+
+<details>
+<summary>lock kernel</summary>
+<br>
+sudo apt-mark hold linux-image-$(uname -r) linux-headers-$(uname -r)
+</details>
+
+<details>
 <summary>delete network interface</summary>
 <br>
 ip link delete "a2"
